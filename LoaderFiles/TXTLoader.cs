@@ -15,18 +15,18 @@ namespace WpfTask.LoaderFiles
         {
             var data = new List<TradeData>();
             var lines = File.ReadAllLines(filePath);
-            for (int i = 1; i < lines.Length; i++) // İlk sətri keçirik (sütun adları)
+            for (int i = 1; i < lines.Length; i++) 
             {
                 var columns = lines[i].Split(';');
 
-                // Tarih formatını kontrol et
+                
                 DateTime parsedDate;
                 if (DateTime.TryParse(columns[0], out parsedDate))
                 {
                     decimal parsedOpen, parsedHigh, parsedLow, parsedClose;
                     int parsedVolume;
 
-                    // Diğer verileri güvenli bir şekilde parse et
+                    
                     bool isOpenValid = decimal.TryParse(columns[1], NumberStyles.Any, CultureInfo.InvariantCulture, out parsedOpen);
                     bool isHighValid = decimal.TryParse(columns[2], NumberStyles.Any, CultureInfo.InvariantCulture, out parsedHigh);
                     bool isLowValid = decimal.TryParse(columns[3], NumberStyles.Any, CultureInfo.InvariantCulture, out parsedLow);
