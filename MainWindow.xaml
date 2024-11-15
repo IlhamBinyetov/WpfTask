@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="File Monitor" Height="350" Width="525">
+    <Grid>
+        <DataGrid x:Name="DataGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionChanged="DataGrid_SelectionChanged" />
+        <Button x:Name="AddFileButton"
+                Content="Add New File"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,30"
+                Click="AddNewFileButton_Click"/>
+    </Grid>
+    
+</Window>
